@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from "axios";
 
 export default class FetchService{
   static controller: AbortController = new AbortController();
-  private static url: string = 'http://localhost:3333/products';
+  private static url: string = '/api/products';
 
   static async getAll(limit: number, sort: string, order: string, page: number): Promise<AxiosResponse> {
     const response = await axios.get(FetchService.url, {
