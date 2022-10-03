@@ -36,9 +36,10 @@ app.use(express.urlencoded({ extended: false}));
 app.post('/products', upload.any(), apiHandler);
 app.patch('/products/:id', upload.any(), apiHandler);
 
+app.use(express.static('../frontend/build'));
 app.use('/files', express.static('./files'));
 app.use(
-  '/', 
+  '/api', 
   (req, res, next) => {
     console.log(req.method + ' request from ' + req.hostname);
     next();
