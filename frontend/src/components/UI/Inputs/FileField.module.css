@@ -1,0 +1,39 @@
+.fileField {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 56px;
+  padding: 10px;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.fileFieldChoosed {
+  border-color: #1976d2;
+  border-width: 2px;
+}
+
+.fileLabel {
+  position: absolute;
+  top: -11px;
+  background-color: #fff;
+  color: #666;
+  font-size: 0.8rem;
+  padding: 0px 5px;
+  user-select: none;
+}
+
+.fileLabelChoosed {
+  color: #1976d2;
+}
+
+.fileInput {
+  color: #8e8e8e;
+}
+
+.fileInputChoosed {
+  color: #1976d2;
+}

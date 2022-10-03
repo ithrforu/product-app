@@ -1,0 +1,23 @@
+#!/bin/bash
+
+startServer(){
+if ! [ -f ./backend/node_modules ]; then
+cd ./backend
+echo 'Start backend dependencies install...'
+yarn install
+fi
+echo 'Start server...'
+yarn start
+}
+
+startReactApp(){
+if ! [ -f ./frontend/node_modules ]; then
+cd ./frontend
+echo 'Start frontend dependencies install...'
+yarn install
+fi
+echo 'Start react app...'
+yarn start
+}
+
+startServer | startReactApp
