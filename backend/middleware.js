@@ -48,5 +48,5 @@ app.use(
 );
 
 app.listen(3333, () => {
-  console.log('JSON Server is running')
+  console.log('Server is running')
 });
