@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from "axios";
 
 export default class FetchService{
   static controller: AbortController = new AbortController();
-  private static url: string = '/api/products';
+  private static url: string = '/api/products/';
 
   static async getAll(limit: number, sort: string, order: string, page: number): Promise<AxiosResponse> {
     const response = await axios.get(FetchService.url, {
@@ -32,7 +32,7 @@ export default class FetchService{
 
   static async editProduct(product: FormData): Promise<AxiosResponse> {
     const response = await axios.patch(
-      FetchService.url + '/' + product.get('id'),
+      FetchService.url + product.get('id'),
       product,
       {
       params: {
@@ -46,7 +46,7 @@ export default class FetchService{
 
   static async deleteProduct(id: number): Promise<AxiosResponse> {
     const response = await axios.delete(
-      FetchService.url + '/' + id,
+      FetchService.url + id,
       {
       params: {
         signal: FetchService.controller.signal,
