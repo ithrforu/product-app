@@ -1,3 +1,3 @@
 {
-  "proxy": "http://localhost:3333"
+  "proxy": "https://my-product-app-2022.herokuapp.com"
 }
