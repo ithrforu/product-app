@@ -35,7 +35,8 @@ const Products:FC = () => {
       />
       <PaginationControlled totalProducts={totalProductsCount} limit={filter.limit}/>
       <StatusBar isLoad={fetchState.isLoad} error={fetchState.error}/>
-      { searchedProducts.map((p: ProductT) => (
+      { !fetchState.isLoad &&
+        searchedProducts.map((p: ProductT) => (
           <Product
             key={p.id}
             product={p}

@@ -110,7 +110,7 @@
       "price": "10",
       "category": "men's clothing",
       "id": "1664813506510",
-      "image": "http://localhost:3333/files/1664813551067t-shirt-nike.jpg"
+      "image": "https://my-product-app-2022.herokuapp.com/files/1664813551067t-shirt-nike.jpg"
     }
   ]
 }

@@ -21,7 +21,7 @@ const upload = multer({ storage: storage });
 const apiHandler = (req, res, next) => {
   if(req.method === 'POST' || req.method === 'PATCH') {
     if(req.files[0]) {
-      req.body.image = `/files/${req.files[0].filename}`
+      req.body.image = `https://my-product-app-2022.herokuapp.com/files/${req.files[0].filename}`
     } else {
       req.body.image = '';
     }
