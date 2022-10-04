@@ -113,29 +113,12 @@
       "image": "https://my-product-app-2022.herokuapp.com/files/1664813551067t-shirt-nike.jpg"
     },
     {
-      "id": "_o9_fUx"
-    },
-    {
-      "id": "nQIp7wb"
-    },
-    {
-      "id": "oRCaWXX"
-    },
-    {
       "title": "test",
       "description": "test",
       "price": "10",
       "category": "men's clothing",
       "id": "1664880447166",
       "image": "/files/1664880447187d5101d48cf30826d1d35.webp"
-    },
-    {
-      "title": "myProduct",
-      "description": "myTitle",
-      "price": "10",
-      "category": "men's clothing",
-      "id": "1664880680706",
-      "image": "/files/1664880680721beachball.jpg"
     },
     {
       "title": "myProxyProduct",
