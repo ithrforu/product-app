@@ -69,7 +69,7 @@ const ProductForm:FC<ProductFormProps> = ({ method, product, onSubmit, children}
       name="category"
       labelId = "category-label"
       label = "Choose category"
-      defaultValue={product?.category}
+      defaultValue={product?.category || 'men\'s clothing'}
       items={[
         {value: 'men\'s clothing', title: 'men\'s clothing'},
         {value: 'women\'s clothing', title: 'women\'s clothing'},

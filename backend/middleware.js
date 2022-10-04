@@ -20,6 +20,10 @@ const upload = multer({ storage: storage });
 
 const apiHandler = (req, res, next) => {
   if(req.method === 'POST' || req.method === 'PATCH') {
+    const hack = req.body;
+    const hack1 = req.files;
+    res.pa
+    console.log(hack, hack1);
     if(req.files[0]) {
       req.body.image = `https://my-product-app-2022.herokuapp.com/files/${req.files[0].filename}`
     } else {
@@ -33,7 +37,11 @@ app.use(cors({
   origin: '*'
 }));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({
+  parameterLimit: 100000,
+  limit: '50mb',
+  extended: true
+}));
 
 app.post('/products', upload.any(), apiHandler);
 app.patch('/products/:id', upload.any(), apiHandler);
