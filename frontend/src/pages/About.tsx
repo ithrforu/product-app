@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import StyledList from '../components/UI/List/StyleList'
+import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 
 const About:FC= () => {
@@ -9,7 +10,11 @@ const About:FC= () => {
         About
       </h1>
       <p className="text-center mb-10">App repository: <Link href="https://github.com/ithrforu/">GitHub</Link>.</p>
-      <div className="flex justify-between">
+      <Stack
+        direction={{xs: 'column', sm: 'row'}}
+        justifyContent="center"
+        spacing={5}
+      >
       <StyledList
         listTitle="Technology list: "
         items={[
@@ -30,7 +35,7 @@ const About:FC= () => {
           'Add comments to source code.',
         ]}
       />
-      </div>
+      </Stack>
     </section>
   );
 };
